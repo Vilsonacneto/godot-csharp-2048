@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=3 uid="uid://daky5gg6l8gkn"]
+
+[ext_resource type="Script" path="res://Scenes/Main.cs" id="1_m5xas"]
+[ext_resource type="Script" path="res://Scenes/Board.cs" id="2_80r4j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kjqa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_m5xas")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(269, 269)
+offset_left = 16.0
+offset_top = 47.0
+offset_right = 285.0
+offset_bottom = 316.0
+
+[node name="Board" type="PanelContainer" parent="."]
+visible = false
+offset_left = 15.0
+offset_top = 12.0
+offset_right = 451.0
+offset_bottom = 312.0
+script = ExtResource("2_80r4j")
+
+[node name="Button" type="Button" parent="." node_paths=PackedStringArray("shortcut_context")]
+offset_left = 16.0
+offset_top = 320.0
+offset_right = 285.0
+offset_bottom = 351.0
+shortcut_context = NodePath("")
+text = "(N)ew Game"
+
+[node name="Quit" type="Button" parent="." node_paths=PackedStringArray("shortcut_context")]
+offset_left = 16.0
+offset_top = 356.0
+offset_right = 285.0
+offset_bottom = 387.0
+shortcut_context = NodePath("")
+text = "(Q)uit"
+
+[node name="Scoring Status" type="Label" parent="."]
+offset_left = 18.0
+offset_top = 10.0
+offset_right = 75.0
+offset_bottom = 36.0
+text = "Score"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -3.81
+anchor_top = -0.518
+anchor_right = -3.81
+anchor_bottom = -0.518
+offset_left = 82.0
+offset_top = 10.0
+offset_right = 158.0
+offset_bottom = 37.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1kjqa")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Popup" type="Popup" parent="."]
+position = Vector2i(30, 50)
+size = Vector2i(300, 200)
+
+[node name="PopupMsg" type="Label" parent="Popup"]
+custom_minimum_size = Vector2(300, 140)
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Message"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PopupCloseBtn" type="Button" parent="Popup"]
+offset_left = 110.0
+offset_top = 150.0
+offset_right = 190.0
+offset_bottom = 181.0
+size_flags_horizontal = 4
+text = "Close"
+
+[connection signal="AddScoreProxy" from="Board" to="." method="OnScoreChange"]
+[connection signal="StatusChanged" from="Board" to="." method="OnStatusChanged"]
+[connection signal="pressed" from="Button" to="Board" method="OnButtonPressed"]
+[connection signal="pressed" from="Popup/PopupCloseBtn" to="." method="OnClosePressed"]

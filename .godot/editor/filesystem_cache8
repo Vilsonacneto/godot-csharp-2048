@@ -1,0 +1,9 @@
+2a60927148abd1d33b818b535e306557
+::res://::1679780275
+icon.svg::CompressedTexture2D::2137114867555514250::1679756344::1679756359::1::::<><>::
+::res://Scenes/::1679780208
+Main.cs::CSharpScript::-1::1679778027::0::1::::<><>::
+main.tscn::PackedScene::7181416936096872465::1679780208::0::1::::<><>::res://Scenes/Main.cs
+::res://Scenes/Element/::1679780209
+Element.cs::CSharpScript::-1::1679780207::0::1::::<><>::
+Element.tscn::PackedScene::3110653826966637948::1679780209::0::1::::<><>::res://Scenes/Element/Element.cs

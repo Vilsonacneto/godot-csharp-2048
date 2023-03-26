@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkk3aqisd7kv1"]
+
+[ext_resource type="Script" path="res://Scenes/Element/Element.cs" id="1_t0h1v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nn5rh"]
+font_size = 14
+
+[node name="Element" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t0h1v")
+
+[node name="BackGround" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1.30714, 1.20801)
+
+[node name="Value" type="Label" parent="BackGround"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+scale = Vector2(1, 1.69154)
+label_settings = SubResource("LabelSettings_nn5rh")
+horizontal_alignment = 1
+vertical_alignment = 1
