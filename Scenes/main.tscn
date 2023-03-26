@@ -87,6 +87,20 @@ offset_bottom = 181.0
 size_flags_horizontal = 4
 text = "Close"
 
+[node name="RecordLabel" type="Label" parent="."]
+offset_left = 164.0
+offset_top = 11.0
+offset_right = 223.0
+offset_bottom = 37.0
+text = "Record:"
+
+[node name="Record" type="Label" parent="."]
+offset_left = 245.0
+offset_top = 10.0
+offset_right = 304.0
+offset_bottom = 36.0
+vertical_alignment = 1
+
 [connection signal="AddScoreProxy" from="Board" to="." method="OnScoreChange"]
 [connection signal="StatusChanged" from="Board" to="." method="OnStatusChanged"]
 [connection signal="pressed" from="Button" to="Board" method="OnButtonPressed"]

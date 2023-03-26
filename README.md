@@ -10,8 +10,8 @@ Heavily inspired on [2048 Demo](https://github.com/DeanNevan/Godot4-Beta7-Test1-
 - [x] Game logic functionality
 - [x] Signals (via code)
 - [x] Scoring system
-- [ ] Save Records
-- [ ]  Unit Testing (w/ CI)
+- [x] Save Records (Edit: Exploring GitHub Copilot)
+- [ ] Unit Testing (w/ CI)
 - [ ] Config Menu
 - [ ] Sound System
 - [ ] Build & Distribute

@@ -1,2 +1,2 @@
-﻿62114
+﻿52668
 C:/Users/Vilson/Documents/Godot/Godot_v4.0.1-stable_mono_win64/Godot_v4.0.1-stable_mono_win64/Godot_v4.0.1-stable_mono_win64.exe
